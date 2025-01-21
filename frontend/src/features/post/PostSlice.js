@@ -29,8 +29,7 @@ export const getAllPostsAction = createAsyncThunk('post/allposts', async (_, thu
 export const getFeedPosts = createAsyncThunk('post/feedPosts', async (_, thunkAPI) => {
     try {
         const response = await customFetch.get('/posts/following')
-        console.log("from getdeed", response.data);
-
+     
         return response.data
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -99,7 +98,7 @@ export const SinglePostAction = createAsyncThunk('post/singlePost', async (post,
 
     try {
         const response = await customFetch.get(`/posts/${post}`)
-        console.log("single post", response.data);
+      
         return response.data
 
 

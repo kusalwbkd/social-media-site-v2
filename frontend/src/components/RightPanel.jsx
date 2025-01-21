@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 
 import FollowUnFollow from "./FollowUnFollow";
+import { useSelector } from "react-redux";
+import RightPanelSkeleton from "./RightPanelSkeleton";
 
 
 
 const RightPanel = ({suggestedUsers}) => {
 
+ const{isLoading}=useSelector((store)=>store.user)
 
+ if(isLoading){
+return <RightPanelSkeleton/>
+ }
 	if(suggestedUsers?.length === 0) {
 		return <div className=" md:w-64 w-0"></div>
 	}

@@ -37,7 +37,7 @@ const Home = () => {
     if (user?._id) {
       dispatch(getFeedPosts());
     }
-  }, [user.followers, dispatch]);
+  }, [user?.followers, dispatch]);
   
 
   return (

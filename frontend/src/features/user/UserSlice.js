@@ -54,7 +54,6 @@ export const registerUserAction = createAsyncThunk('user/registernUser', async (
 export const getAllUsersAction = createAsyncThunk('user/allusers', async (__dirname, thunkAPI) => {
   try {
     const response = await customFetch.get('/users')
-    console.log("from all users action", response.data);
 
 
     return response.data
@@ -89,7 +88,6 @@ export const followUnfollowAction = createAsyncThunk('user/followUnfollow', asyn
 export const updateUserAction = createAsyncThunk('user/update', async (user, thunkAPI) => {
   try {
     const response = await customFetch.patch('/users/update', user)
-    console.log(response.data);
     return response.data
 
   } catch (error) {

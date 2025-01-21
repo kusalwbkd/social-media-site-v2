@@ -42,7 +42,7 @@ const ProfilePage = () => {
 		}
 	}, [user, dispatch]); 
 
-	const isMyProfile = user?.username === owner.username
+	const isMyProfile = user?.username === owner?.username
 	const [feedType, setFeedType] = useState("posts");
 	const memberSinceDate = formatMemberSinceDate(user?.createdAt)
 

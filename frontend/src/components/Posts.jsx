@@ -38,7 +38,7 @@ const Posts = ({ feedType }) => {
 				{userPosts?.length === 0 && <p className='text-center my-4'>No posts in this tab. Switch 👻</p>}
 				<div>
 					{userPosts?.map((post) => (
-						<Post key={post._id} post={post} person={post.user} />
+						<Post key={post?._id} post={post} person={post?.user} />
 					))}
 
 				</div>
@@ -51,7 +51,7 @@ const Posts = ({ feedType }) => {
 				<div>
 					{likedPosts?.map((post) => (
 
-						<Post key={post._id} post={post} person={post.user} />
+						<Post key={post?._id} post={post} person={post?.user} />
 					))}
 
 				</div>
@@ -62,7 +62,7 @@ const Posts = ({ feedType }) => {
 				{posts?.length === 0 && <p className='text-center my-4'>No posts in this tab. Switch 👻</p>}
 				<div>
 					{posts?.map((post) => (
-						<Post key={post._id} post={post} person={post.user} />
+						<Post key={post?._id} post={post} person={post?.user} />
 
 					))}
 
@@ -75,7 +75,7 @@ const Posts = ({ feedType }) => {
 				{feedPosts?.length === 0 && <p className='text-center my-4'>No posts in this tab. Switch 👻</p>}
 				<div>
 					{feedPosts?.map((post) => (
-						<Post key={post._id} post={post} person={post.user} />
+						<Post key={post?._id} post={post} person={post?.user} />
 
 					))}
 
