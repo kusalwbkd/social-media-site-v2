@@ -5,7 +5,7 @@ import { getAllUsersAction, getSuggestedUsers } from "../features/user/UserSlice
 import { getAllPostsAction, getFeedPosts } from "../features/post/PostSlice";
 import { useEffect } from "react";
 import { RightPanel, Sidebar } from "../components";
-
+//some changes
 const Home = () => {
   const { user, AllUsers, suggestedUsers } = useSelector((store) => store.user);
   const navigate = useNavigate();
