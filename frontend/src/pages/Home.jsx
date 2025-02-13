@@ -12,6 +12,9 @@ const Home = () => {
   const dispatch = useDispatch();
  
   useEffect(() => {
+    if(user === undefined){
+      return
+    }
     if (!user) {
       toast.dismiss();
       toast.error('please login');
